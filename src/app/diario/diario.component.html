@@ -1,0 +1,25 @@
+
+<div>
+    <img src="books.gif" class="rounded mx-auto d-block text-focus-in" height="300px" alt="">
+</div>
+<h1 class="display-5 text-focus-in text-center ">Principais Títulos</h1>
+
+<div  class="row row-cols-1 row-cols-md-3 g-4 ">
+    <div class="col" *ngFor="let item of content">
+        <div class="card mb-3 text-focus-in" style="max-width: 540px; border: none;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{ item.cover }}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body ">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">Nº Livro: {{ item.number }}</p>
+                    <p class="card-text">Nº Páginas: {{ item.pages }}</p>
+                    <p class="card-text"><small class="text-body-secondary">Data de lançamento: {{ item.releaseDate }}  </small></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

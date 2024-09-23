@@ -1,0 +1,18 @@
+<div class="container-fluid" style="margin: 20px;">
+
+  <h3 class="display-5 titulo text-focus-in">As Casas de Hogwarts</h3>
+
+  <p class="text-focus-in">Hogwarts é dividida em quatro casas:</p>
+  <div class="row">
+    <div class="card text-focus-in" *ngFor="let item of content" style="width: 18rem; border:none;">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.house }} </h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Fondador: {{ item.founder }} </li>
+          <li class="list-group-item">Cores: {{ item.colors }}  </li>
+          <li class="list-group-item">Mascote:  {{ item.animal }} {{ item.emoji }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
