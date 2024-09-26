@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentHomeService } from '../content-home.service';
+import { BooksService } from '../books.service';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -13,12 +13,10 @@ import { NgFor } from '@angular/common';
 export class DiarioComponent implements OnInit {
   content: any[] = [];
 
-  constructor(private contentService: ContentHomeService) {}
-
-
+  constructor(private bookservice: BooksService) {}
 
   ngOnInit(): void {
-    this.contentService.getBooks().subscribe(
+    this.bookservice.getBooks().subscribe(
       (content) => {
       this.content = content;
     },
