@@ -11,7 +11,7 @@ interface Spells {
   providedIn: 'root'
 })
 export class SpellsService {
-  url = 'https://potterapi-fedeperin.vercel.app/pt/spells';
+  private url = 'https://potterapi-fedeperin.vercel.app/pt/spells';
 
 
   constructor(private http: HttpClient) { }

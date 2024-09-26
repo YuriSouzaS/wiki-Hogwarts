@@ -1,0 +1,24 @@
+<h1 class="display-5 text-focus-in text-center">Principais Personagens</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 " style="margin-top: 25px;">
+    <div class="col" *ngFor="let item of content">
+        <div class="card mb-3" style="max-width: 540px; border: none;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ item.image }}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.fullName }}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Casa: {{ item.hogwartsHouse }} </li>
+                    <li class="list-group-item">Data da nascimento: {{ item.birthdate }}</li>
+                    <li class="list-group-item">filhos: {{ item.children }}</li>
+                    <li class="list-group-item">Interpretado por: {{ item.interpretedBy }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
